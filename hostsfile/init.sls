@@ -29,7 +29,7 @@
     - names:
       - {{ name }}
         {%- if domain %}
-      - {{ name }}.{{ domain }}
+      - {{ name.replace(domain, '') }}
         {%- endif %}
     {%- endif %}
 {% endfor %}
